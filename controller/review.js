@@ -10,6 +10,9 @@ module.exports.addReview = async(req ,res)=>{
     await newReview.save();
     await listing.save();
     req.flash("success" ,"Review added succesfully.");
+    // if(!newReview){
+    //     req.flash("error" ,"please add comment.");
+    // }
 
     res.redirect(`/listings/${listing._id}`);
 };

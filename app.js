@@ -35,6 +35,7 @@ app.set("views" ,path.join(__dirname ,"views"));
 
 
 const dbatlas = process.env.DBATLAS;
+const MONGO_URL = 'mongodb://127.0.0.1:27017/wanderlust'
 
 main().then((res)=>{
     console.log("connection successful");
@@ -42,12 +43,12 @@ main().then((res)=>{
 .catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect(dbatlas);
+  await mongoose.connect(MONGO_URL);
 
 }
 
 const store = MongoStore.create({
-    mongoUrl: dbatlas ,
+    mongoUrl: MONGO_URL ,
     crypto:{
         secret: process.env.SECRET
     } ,
