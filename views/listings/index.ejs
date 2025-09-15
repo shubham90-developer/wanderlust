@@ -44,6 +44,10 @@
     </div>
 
     <div class="container">
+        
+        <% if (allListings.length === 0) { %>
+        <h3>No results found.</h3>
+        <% }%>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
             <% for (let list of allListings) { %>
                 <div class="col">

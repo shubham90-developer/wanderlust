@@ -89,7 +89,7 @@ app.use("/listings/:id/reviews", reviewsRoutes);
 app.use("/", userRoutes);
 
 app.all("*", (req, res, next) => {
-  next(new expressError(404, "page not found"));
+  res.redirect("/listings");
 });
 
 app.use((err, req, res, next) => {

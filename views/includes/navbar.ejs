@@ -47,8 +47,8 @@
                 <a class="nav-link" href="/listings">Explore</a>
             </div>
 
-            <form class="d-flex me-auto" role="search">
-                <input class="form-control me-2 search-input" type="search" placeholder="Search destinations" aria-label="Search">
+            <form method="get" action="/listings/search" class="d-flex me-auto" role="search">
+                <input name="query" class="form-control me-2 search-input" type="search" placeholder="Search destinations" aria-label="Search">
                 <button class="btn btn-search" type="submit"> <i class="fa-solid fa-magnifying-glass"></i> Search</button>
             </form>
 
